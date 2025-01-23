@@ -13,6 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
       3: { title: "フリースクール支援", description: "Task 3の詳細情報です。" },
       4: { title: "子ども食堂経済的支援", description: "Task 4の詳細情報です。" },
       5: { title: "フードバンク設立", description: "Task 5の詳細情報です。" },
+      6: { title: "歴史・観光拠点つくしちゃんカフェオープン", description: "Task 6の詳細情報です。" },
+      7: { title: "インバウンド対策", description: "Task 7の詳細情報です。" },
+      8: { title: "観光パネル設置、高架下LED化", description: "Task 8の詳細情報です。" },
+      9: { title: "産後ケア通所型、宿泊型導入", description: "Task 9の詳細情報です。" },
+      10: { title: "パパのための育児講座", description: "Task 10の詳細情報です。" },
     };
   
     // 各タスクにクリックイベントを追加

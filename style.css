@@ -114,6 +114,10 @@ body {
   background-color: var(--gray-242242242);
 }
 
+.gantt-chart .gantt-chart__tasks > div:last-child {
+  border-bottom-left-radius: 12px;
+}
+
 .gantt-chart .gantt-chart__progress {
   border-right: 1px solid rgba(var(--black-rgb), 1);
 }
@@ -146,6 +150,10 @@ body {
 .gantt-chart .gantt-chart__timeline {
   display: grid;
   overflow-x: auto;
+}
+
+.gantt-chart .gantt-chart__timeline > div:last-child {
+  border-bottom-right-radius: 12px;
 }
 
 .gantt-chart .gantt-timeline__year {
