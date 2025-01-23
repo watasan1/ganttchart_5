@@ -1,11 +1,282 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>テスト</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gantt Chart 4</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="gantt-chart">
+      <!-- tasksection -->
+      <div class="gantt-chart__tasks">
+        <div class="gantt-task"></div>
+        <div class="gantt-task"></div>
+        <div class="gantt-task" data-task="1">
+          <span class="gantt-task__label">紫プロジェクト</span>
+          <span class="gantt-task__arrow"></span>
+        </div>
+        <div class="gantt-task" data-task="2">
+          <span class="gantt-task__label">不登校対策</span>
+          <span class="gantt-task__arrow"></span>
+        </div>
+        <div class="gantt-task" data-task="3">
+          <span class="gantt-task__label">フリースクール支援</span>
+          <span class="gantt-task__arrow"></span>
+        </div>
+        <div class="gantt-task" data-task="4">
+          <span class="gantt-task__label">子ども食堂経済的支援</span>
+          <span class="gantt-task__arrow"></span>
+        </div>
+        <div class="gantt-task" data-task="5">
+          <span class="gantt-task__label">フードバンク設立</span>
+          <span class="gantt-task__arrow"></span>
+        </div>
+      </div>
+      <!-- モーダルウィンドウ -->
+      <div id="task-modal" class="modal">
+        <div class="modal__content">
+          <button class="modal__close">&times;</button>
+          <h2 class="modal-title">Task Details</h2>
+          <p id="modal-description">タスクの詳細がここに表示されます。</p>
+        </div>
+      </div>
+      <!-- progresssection -->
+      <div class="gantt-chart__progress">
+        <div class="gantt-progress"></div>
+        <div class="gantt-progress">進捗</div>
+        <div class="gantt-progress">完了</div>
+        <div class="gantt-progress">10%</div>
+        <div class="gantt-progress">10%</div>
+        <div class="gantt-progress">完了</div>
+        <div class="gantt-progress">40%</div>
+      </div>
+      <!-- timelinesection -->
+      <div class="gantt-chart__timeline">
+        <!-- year -->
+        <div class="gantt-timeline__year"><span>2025</span></div>
+        <!-- months -->
+        <div class="gantt-timeline__months">
+          <div><span>1</span></div>
+          <div><span>2</span></div>
+          <div><span>3</span></div>
+          <div><span>4</span></div>
+          <div><span>5</span></div>
+          <div><span>6</span></div>
+          <div><span>7</span></div>
+          <div><span>8</span></div>
+          <div><span>9</span></div>
+          <div><span>10</span></div>
+          <div><span>11</span></div>
+          <div><span>12</span></div>
+        </div>
+        <!-- sheets -->
+        <!-- timelinerow 1 -->
+        <div class="gantt-timeline__row">
+          <!-- task 1 -->
+          <div class="gantt-timeline__cell--highlighted gantt-timeline__cell">
+            <!-- 1月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 2月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 3月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 4月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 5月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 6月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 7月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 8月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 9月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 10月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 11月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 12月 -->
+          </div>
+        </div>
+        <!-- timelinerow 2 -->
+        <div class="gantt-timeline__row">
+          <!-- task2 -->
+          <div class="gantt-timeline__cell--highlighted gantt-timeline__cell">
+            <!-- 1月 -->
+            <div class="gantt-timeline__ganttbar"></div>
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 2月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 3月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 4月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 5月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 6月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 7月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 8月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 9月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 10月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 11月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 12月 -->
+          </div>
+        </div>
+        <!-- timelinerow 3 -->
+        <div class="gantt-timeline__row">
+          <!-- task3 -->
+          <div class="gantt-timeline__cell--highlighted gantt-timeline__cell">
+            <div class="gantt-timeline__ganttbar"></div>
+            <!-- 1月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 2月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 3月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 4月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 5月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 6月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 7月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 8月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 9月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 10月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 11月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 12月 -->
+          </div>
+        </div>
+        <!-- timelinerow 4 -->
+        <div class="gantt-timeline__row">
+          <!-- task4 -->
+          <div class="gantt-timeline__cell--highlighted gantt-timeline__cell">
+            <!-- 1月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 2月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 3月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 4月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 5月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 6月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 7月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 8月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 9月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 10月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 11月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 12月 -->
+          </div>
+        </div>
+        <!-- timelinerow 5 -->
+        <div class="gantt-timeline__row">
+          <!-- task5 -->
+          <div class="gantt-timeline__cell--highlighted gantt-timeline__cell">
+            <div class="gantt-timeline__ganttbar"></div>
+            <!-- 1月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 2月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 3月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 4月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 5月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 6月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 7月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 8月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 9月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 10月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 11月 -->
+          </div>
+          <div class="gantt-timeline__cell">
+            <!-- 12月 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

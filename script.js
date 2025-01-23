@@ -1,0 +1,48 @@
+// JavaScriptコード
+document.addEventListener("DOMContentLoaded", () => {
+    const tasks = document.querySelectorAll(".gantt-task");
+    const modal = document.getElementById("task-modal");
+    const closeModalButton = modal.querySelector(".modal__close");
+    const modalDescription = document.getElementById("modal-description");
+    const modalTitle = modal.querySelector(".modal-title");
+  
+    // タスク詳細情報
+    const taskDetails = {
+      1: { title: "紫プロジェクト", description: "紫プロジェクトは以下のようにやりました。" },
+      2: { title: "不登校対策", description: "不登校対策について私はこう思い、〇〇市では、年間〇〇万円を支給し対応を図っています。" },
+      3: { title: "フリースクール支援", description: "Task 3の詳細情報です。" },
+      4: { title: "子ども食堂経済的支援", description: "Task 4の詳細情報です。" },
+      5: { title: "フードバンク設立", description: "Task 5の詳細情報です。" },
+    };
+  
+    // 各タスクにクリックイベントを追加
+    tasks.forEach(task => {
+      task.addEventListener("click", () => {
+        const taskId = task.getAttribute("data-task");
+  
+        // タスクIDがtaskDetailsに存在する場合、詳細情報を設定
+        if (taskDetails[taskId]) {
+          modalTitle.textContent = taskDetails[taskId].title;
+          modalDescription.textContent = taskDetails[taskId].description;
+        } else {
+          modalTitle.textContent = "詳細情報なし";
+          modalDescription.textContent = "このタスクに関する情報はありません。";
+        }
+  
+        modal.classList.add("open");
+      });
+    });
+  
+    // モーダルを閉じるイベント
+    closeModalButton.addEventListener("click", () => {
+      modal.classList.remove("open");
+    });
+  
+    // モーダル外をクリックして閉じる
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.classList.remove("open");
+      }
+    });
+  });
+  
