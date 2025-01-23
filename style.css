@@ -51,7 +51,7 @@ body {
 }
 
 .gantt-chart .gantt-task:nth-child(n + 3) {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .gantt-chart .gantt-task:first-child {
@@ -114,8 +114,8 @@ body {
   background-color: var(--gray-242242242);
 }
 
-.gantt-chart .gantt-chart__tasks > div:last-child {
-  border-bottom-left-radius: 12px;
+.gantt-chart .gantt-chart__tasks > div:last-child{
+  border-bottom-left-radius:12px;
 }
 
 .gantt-chart .gantt-chart__progress {
@@ -152,8 +152,8 @@ body {
   overflow-x: auto;
 }
 
-.gantt-chart .gantt-chart__timeline > div:last-child {
-  border-bottom-right-radius: 12px;
+.gantt-chart .gantt-chart__timeline > div:last-child{
+  border-bottom-right-radius:12px;
 }
 
 .gantt-chart .gantt-timeline__year {
@@ -246,7 +246,7 @@ body {
 }
 
 .gantt-timeline__ganttbar--300 {
-  width: calc(300% + 4px);
+   width: calc(300% + 4px);
 }
 
 .gantt-timeline__ganttbar--400 {
@@ -291,7 +291,7 @@ body {
 
 /* モーダルのスタイル */
 .modal {
-  /*  display: none;*/
+/*  display: none;*/
   position: fixed;
   top: 0;
   left: 0;
@@ -299,8 +299,8 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* 背景の暗いオーバーレイ */
   display: none;
-  /*  justify-content: center;*/
-  /*  align-items: center;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
   z-index: 2;
 }
 
