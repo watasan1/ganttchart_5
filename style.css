@@ -8,6 +8,7 @@
 
 html {
   font-family: Arial, sans-serif;
+  font-size: 100%;
 }
 
 :root {
@@ -28,7 +29,7 @@ body {
   background-color: var(--white-255255255);
   width: min(92%, 1024px);
   display: grid;
-  grid-template-columns: 160px 80px 1fr;
+  grid-template-columns: 160px 65px 1fr;
   margin: 10px auto;
   border-radius: 12px;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
@@ -75,6 +76,7 @@ body {
   overflow-x: auto;
   max-width: calc(100% - 40px);
   white-space: nowrap;
+  font-size: clamp(0.9375rem, 1.95vw, 1rem);
 }
 
 .gantt-chart .gantt-task__arrow {
@@ -130,6 +132,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: clamp(0.9375rem, 1.95vw, 1rem);
 }
 
 /* header progress background-color  */
@@ -172,6 +175,7 @@ body {
 .gantt-chart .gantt-timeline__year span {
   margin: auto;
   font-weight: bold;
+  font-size: clamp(0.9375rem, 1.95vw, 1rem);
   color: var(--white-255255255);
 }
 
@@ -200,6 +204,7 @@ body {
 .gantt-chart .gantt-timeline__months span {
   margin: auto;
   font-weight: bold;
+  font-size: clamp(0.9375rem, 1.95vw, 1rem);
   color: var(--white-255255255);
 }
 
@@ -330,8 +335,14 @@ body {
 
 .modal-title {
   margin: 0 0 10px;
+  font-size:1.5rem;
+  font-weight:bold;
 }
 
 .modal.open {
   display: flex;
+}
+
+.modal-description {
+  font-size: clamp(0.9375rem, 1.95vw, 1rem);
 }
