@@ -335,8 +335,7 @@ body {
 
 .modal-title {
   margin: 0 0 10px;
-  font-size:1.5rem;
-  font-weight:bold;
+  font-size: clamp(1.4375rem, 2.99vw, 1.5rem);
 }
 
 .modal.open {
